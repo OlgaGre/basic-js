@@ -16,12 +16,28 @@ const HALF_LIFE_PERIOD = 5730;
  * dateSample('1') => 22387
  * dateSample('WOOT!') => false
  *
- */
-function dateSample(/* sampleActivity */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+ */ // 
+function dateSample(sampleActivity = 0) {
+    if (sampleActivity < 1 || sampleActivity > 15 || typeof sampleActivity != 'string' || sampleActivity == NaN) {
+        return false
+    }
+    const timeHalf = 0.693;
+    let speed = timeHalf / HALF_LIFE_PERIOD;
+    let result = Math.ceil(Math.log(MODERN_ACTIVITY / sampleActivity) / speed)
+        // if (typeof result == "number") {
+        //     return result
+        // } else {
+        //     return false
+        // }
+    if (isNaN(result)) {
+        return false
+    } else {
+        return result
+    }
+    throw new NotImplementedError('Not implemented');
+
 }
 
 module.exports = {
-  dateSample
+    dateSample
 };
