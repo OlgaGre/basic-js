@@ -43,7 +43,7 @@ function getSeason(date = -1) {
     } else {
         throw Error("Invalid date!");
     }
-    // throw new NotImplementedError('Not implemented');
+
 
 }
 
