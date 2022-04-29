@@ -41,9 +41,9 @@ function getSeason(date = -1) {
     } else if (date == -1) {
         return 'Unable to determine the time of year!'
     } else {
-        return 'Invalid date!'
+        throw Error("Invalid date!");
     }
-    throw new NotImplementedError('Not implemented');
+    // throw new NotImplementedError('Not implemented');
 
 }
 
