@@ -34,7 +34,7 @@ function dateSample(sampleActivity = 0) {
     } else {
         return result
     }
-    throw new NotImplementedError('Not implemented');
+
 
 }
 
