@@ -40,7 +40,7 @@ function transform(arr) {
     //     }
     //     return result
     // } else {
-    //     throw Error("'arr' parameter must be an instance of the Array!")
+    //     throw new Error("'arr' parameter must be an instance of the Array!")
     // }
 
 }
